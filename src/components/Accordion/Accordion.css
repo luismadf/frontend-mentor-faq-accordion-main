@@ -1,0 +1,30 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacer) * 4);
+}
+
+.accordion hr {
+  border: none;
+  border-top: 1px solid var(--light-pink);
+}
+
+.accordion-item__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(var(--spacer) * 1.5);
+  cursor: pointer;
+}
+
+.accordion-item p {
+  max-height: 0;
+  opacity: 0;
+  transition: 0.1s ease-in opacity, 0.2s ease margin-top, 0.3s ease max-height;
+}
+
+.accordion-item p.active {
+  margin-top: calc(var(--spacer) * 3);
+  max-height: 180px;
+  opacity: 1;
+}
