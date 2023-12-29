@@ -3,10 +3,16 @@
 :root {
   --font-work-sans: 'Work Sans', sans-serif;
 
+  --spacer: 8px;
+
   --white: hsl(0, 0%, 100%);
-  --light-pink: hsl(275, 100%, 97%);
+  --light-pink: #f8eeff;
   --grayish-purple: hsl(292, 16%, 49%);
   --dark-purple: hsl(292, 42%, 14%);
+}
+
+html {
+  font-size: 16px;
 }
 
 * {
@@ -17,4 +23,36 @@
 
 img {
   max-width: 100%;
+}
+
+h1 {
+  font-family: var(--font-work-sans);
+  font-size: 3.375rem;
+  color: var(--dark-purple);
+}
+
+h3 {
+  font-family: var(--font-work-sans);
+  font-size: 1.125rem;
+  color: var(--dark-purple);
+  font-weight: 600;
+}
+
+p {
+  font-family: var(--font-work-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--grayish-purple);
+}
+
+.faq__card-title {
+  display: flex;
+  gap: calc(var(--spacer) * 3);
+  margin-bottom: calc(var(--spacer) * 5);
+}
+
+@media (max-width: 425px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
